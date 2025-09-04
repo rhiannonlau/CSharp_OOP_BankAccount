@@ -1,0 +1,15 @@
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\bin\Debug\net9.0\Classes.exe
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\bin\Debug\net9.0\Classes.deps.json
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\bin\Debug\net9.0\Classes.runtimeconfig.json
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\bin\Debug\net9.0\Classes.dll
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\bin\Debug\net9.0\Classes.pdb
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.AssemblyInfoInputs.cache
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.AssemblyInfo.cs
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.sourcelink.json
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.dll
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\refint\Classes.dll
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.pdb
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\Classes.genruntimeconfig.cache
+C:\Users\Eva 2022\OOP Practice\CSharp_OOP_BankAccount\Classes\obj\Debug\net9.0\ref\Classes.dll
