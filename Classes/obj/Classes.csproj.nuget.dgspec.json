@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\Classes\\Classes.csproj": {}
+    "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\classes\\Classes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\Classes\\Classes.csproj": {
+    "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\classes\\Classes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\Classes\\Classes.csproj",
+        "projectUniqueName": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\classes\\Classes.csproj",
         "projectName": "Classes",
-        "projectPath": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\Classes\\Classes.csproj",
+        "projectPath": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\classes\\Classes.csproj",
         "packagesPath": "C:\\Users\\Eva 2022\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\Classes\\obj\\",
+        "outputPath": "C:\\Users\\Eva 2022\\OOP Practice\\CSharp_OOP_BankAccount\\classes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -36,3 +36,30 @@ catch (InvalidOperationException e)
 
 // Test transaction logging.
 Console.WriteLine(account.GetAccountHistory());
+
+// Test GiftCardAccount
+var giftCard = new GiftCardAccount("gift card", 100, 50);
+giftCard.MakeWithdrawal(20, DateTime.Now, "get expensive coffee");
+giftCard.MakeWithdrawal(50, DateTime.Now, "buy groceries");
+giftCard.PerformMonthEndTransactions();
+// Can make additional deposits:
+giftCard.MakeDeposit(27.50m, DateTime.Now, "add some additional spending money");
+Console.WriteLine(giftCard.GetAccountHistory());
+
+// Test InterestEarningAccount
+var savings = new InterestEarningAccount("savings account", 10000);
+savings.MakeDeposit(750, DateTime.Now, "save some money");
+savings.MakeDeposit(1250, DateTime.Now, "add more savings");
+savings.MakeWithdrawal(250, DateTime.Now, "needed to pay monthly bills");
+savings.PerformMonthEndTransactions();
+Console.WriteLine(savings.GetAccountHistory());
+
+// Test LineOfCreditAccount
+var lineOfCredit = new LineOfCreditAccount("line of credit", 0, 2000);
+// How much is too much to borrow?
+lineOfCredit.MakeWithdrawal(1000m, DateTime.Now, "take out monthly advance");
+lineOfCredit.MakeWithdrawal(50m, DateTime.Now, "pay back small amount");
+lineOfCredit.MakeWithdrawal(5000m, DateTime.Now, "emergency funds for repairs");
+lineOfCredit.MakeWithdrawal(150m, DateTime.Now, "partial restoration on repairs");
+lineOfCredit.PerformMonthEndTransactions();
+Console.WriteLine(lineOfCredit.GetAccountHistory());

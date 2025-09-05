@@ -22,13 +22,22 @@ public class BankAccount
         }
     }
 
-    public BankAccount(string name, decimal initialBalance)
+    private readonly decimal _minimumBalance;
+
+    public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { } // constructor chaining
+
+    public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
     {
         Number = s_accountNumberSeed.ToString();
         s_accountNumberSeed++;
 
         Owner = name;
-        MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+        _minimumBalance = minimumBalance;
+
+        if (initialBalance > 0) // deposits must be positive, but credit accounts can open with a 0 balance
+        {
+            MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+        }
     }
 
     private List<Transaction> _allTransactions = new List<Transaction>();
@@ -46,18 +55,46 @@ public class BankAccount
 
     public void MakeWithdrawal(decimal amount, DateTime date, string note)
     {
+        // if (amount <= 0)
+        // {
+        //     throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive.");
+        // }
+
+        // if (Balance - amount < _minimumBalance)
+        // {
+        //     throw new InvalidOperationException("Insufficient funds for this withdrawal.");
+        // }
+
+        // var withdrawal = new Transaction(-amount, date, note);
+        // _allTransactions.Add(withdrawal);
+
         if (amount <= 0)
         {
-            throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdeawal must be positive.");
+            throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive.");
         }
 
-        if (Balance - amount < 0)
+        Transaction? overdractTransaction = CheckWithdrawalLimit(Balance - amount < _minimumBalance);
+        Transaction? withdrawal = new(-amount, date, note);
+        _allTransactions.Add(withdrawal);
+
+        if (overdractTransaction != null)
+        {
+            _allTransactions.Add(overdractTransaction);
+        }
+    }
+
+    // separated from MakeWithdrawal to allow LineOfCreditAccounts to go over the credit limit with a fee instead of refusing the transaction
+    protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+    {
+        if (isOverdrawn)
         {
             throw new InvalidOperationException("Insufficient funds for this withdrawal.");
         }
 
-        var withdrawal = new Transaction(-amount, date, note);
-        _allTransactions.Add(withdrawal);
+        else
+        {
+            return default;
+        }
     }
 
     public string GetAccountHistory()
@@ -75,4 +112,6 @@ public class BankAccount
 
         return report.ToString();
     }
+
+    public virtual void PerformMonthEndTransactions() { }
 }
